@@ -1,3 +1,8 @@
+/**
+ * Global params to all project
+ */
+
+
 // Colors
 export const PRIMARY_COLOR = '#60371E';
 export const BROWN_COLOR = '#D1BF91';

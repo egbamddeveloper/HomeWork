@@ -1,3 +1,7 @@
+/**
+ * Coffee component
+ */
+
 import React from 'react';
 import { View, Image, Text, TextInput } from 'react-native';
 import Params from '../Params';
@@ -20,31 +24,31 @@ class Coffee extends React.Component {
 
     render() {
         return (
-            <View style={styles.box}>
-                <Image
+            <View style={styles.box}> {/* Start box of component */}
+                <Image /* Image of coffee */
                     style={styles.image}
                     source={{ uri: getUrlOfCoffeByName(this.props.name) }} />
-                <View style={styles.info}>
+                <View style={styles.info}> {/* Box to Type and name of coffee */}
                     <View>
                         <Text style={styles.title} >{'Type'}</Text>
                         <Text style={styles.name} >{this.props.name}</Text>
                     </View>
                     <View style={styles.line} />
-                    <View style={styles.spilt}>
+                    <View style={styles.spilt}> {/* Box to Defective Beans and Percentage */}
                         <View style={styles.verticleLine} />
-                        <View style={styles.miniBox}>
+                        <View style={styles.miniBox}> {/* Defective Beans box */}
                             <Text style={styles.miniTitle} >{'Defective\nBeans'}</Text>
                             <Text style={styles.bigText} >{beans}</Text>
                         </View>
                         <View style={styles.verticleLine} />
-                        <View style={styles.miniBox}>
+                        <View style={styles.miniBox}> {/* Percentage box */}
                             <Text style={styles.title} >{'%'}</Text>
                             <Text style={styles.bigText} >{mush}</Text>
                         </View>
                     </View>
                 </View>
                 <View style={styles.verticleLine} />
-                <View style={styles.feedback}>
+                <View style={styles.feedback}> {/* Feedback box */}
                     <Text style={styles.title} >{'Feedback'}</Text>
                     <TextInput
                         style={styles.input}
